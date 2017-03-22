@@ -53,8 +53,10 @@
         
         <h3>Fuck You</h3>
         <center> 
-		<img src="1462163258166.jpg" style:"height: 50px;width: 50px"/>
-
+		<img id='container' src="biggun 1 concept.png" >
+		<input type='button' value='next' onclick='ic1.next("container")' />
+		<input type='button' value='prev' onclick='ic1.prev("container")' />
+		</center>
 		<div class="ghost"id="arrowh" style ="width:250px; height:250px; background: red;  "/>
 		<img class="ghostfriend"id="arrow" src="future.jpg"style:"height: 250px;width: 350px"/>
         <A href = "https://www.youtube.com/watch?v=JZ_iJt8Ny1A"><img class="ghostfriend" id="arrow2"src = "future.jpg"  alt = "Tyler the Creator"style=" height:250px; width: 350px"></A>
@@ -77,7 +79,26 @@
       arrow.style.visibility = ''
        arrow2.style.visibility = ''
     })
-
+	function ImageCollection(images) {
+     this.images = images;
+     this.i = 0;
+     this.next = function(imgId) {
+     var img = document.getElementById(imgId);
+     this.i++;
+     if (this.i == images.length )
+         this.i = 0;
+         img.src = images[this.i];
+     }
+     this.prev = function(imgId) {
+     var img = document.getElementById(imgId);
+     this.i--;
+     if (this.i <= 0)
+         this.i = images.length -1;
+         img.src = images[this.i];
+     }
+	}
+	
+	var icl = new ImageCollection('biggun 1 concept.png', 'biggun 2.png', 'biggun 3.png');
     arrowh.addEventListener('mouseleave', function () {
       arrow.style.visibility = 'hidden'
        arrow2.style.visibility = 'hidden'
