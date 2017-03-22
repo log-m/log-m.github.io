@@ -53,7 +53,7 @@
         
         <h3>Fuck You</h3>
         <center> 
-		<img id='container' src="biggun 1 concept.png" >
+		<img id="container" src="biggun 1 concept.png" >
 		<input type='button' value='next' onclick='ic1.next("container")' />
 		<input type='button' value='prev' onclick='ic1.prev("container")' />
 		</center>
@@ -70,6 +70,7 @@
        
     </body>
 	<script>
+			var icl = new ImageCollection(['biggun 1 concept.png', 'biggun 2.png', 'biggun 3.png']);
 			var man = window.document.getElementById('arrow');
 			man.style.visibility= 'hidden';
             man = window.document.getElementById('arrow2');
@@ -92,13 +93,13 @@
      this.prev = function(imgId) {
      var img = document.getElementById(imgId);
      this.i--;
-     if (this.i <= 0)
+     if (this.i < 0)
          this.i = images.length -1;
          img.src = images[this.i];
      }
 	}
 	
-	var icl = new ImageCollection(['biggun 1 concept.png', 'biggun 2.png', 'biggun 3.png']);
+	
     arrowh.addEventListener('mouseleave', function () {
       arrow.style.visibility = 'hidden'
        arrow2.style.visibility = 'hidden'
