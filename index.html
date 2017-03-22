@@ -37,7 +37,10 @@
                 
                 
             }
-
+			.comic>img{
+				height:60%;
+				width:60%;
+			}
         </style>
     </head>
     <body>
@@ -53,10 +56,12 @@
         
         <h3>Fuck You</h3>
         <center> 
-		<img id="container" src="biggun 1 concept.png" style:"height: 1312px; width: 1125px">
-		<input type='button' value='next' onclick='ic1.next("container")' />
+		<div class='comic'><img id="container" src="biggun 1 concept.png" style:"height: 1312px; width: 1125px;"></div>
 		<input type='button' value='prev' onclick='ic1.prev("container")' />
+		<input type='button' value='next' onclick='ic1.next("container")' />
+		
 		</center>
+		
 		<div class="ghost"id="arrowh" style ="width:250px; height:250px; background: red;  "/>
 		<img class="ghostfriend"id="arrow" src="future.jpg"style:"height: 250px;width: 350px"/>
         <A href = "https://www.youtube.com/watch?v=JZ_iJt8Ny1A"><img class="ghostfriend" id="arrow2"src = "future.jpg"  alt = "Tyler the Creator"style=" height:250px; width: 350px"></A>
