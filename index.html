@@ -70,7 +70,7 @@
        
     </body>
 	<script>
-			var icl = new ImageCollection(['biggun 1 concept.png', 'biggun 2.png', 'biggun 3.png']);
+			
 			var man = window.document.getElementById('arrow');
 			man.style.visibility= 'hidden';
             man = window.document.getElementById('arrow2');
@@ -86,19 +86,21 @@
      this.next = function(imgId) {
      var img = document.getElementById(imgId);
      this.i++;
-     if (this.i == images.length )
+     if (this.i == images.length){
          this.i = 0;
-         img.src = images[this.i];
+         }
+     img.src = images[this.i];
      }
      this.prev = function(imgId) {
      var img = document.getElementById(imgId);
      this.i--;
-     if (this.i < 0)
+     if (this.i < 0){
          this.i = images.length -1;
+         }
          img.src = images[this.i];
      }
 	}
-	
+	var ic1 = new ImageCollection(['biggun 1 concept.png', 'biggun 2.png', 'biggun 3.png']);
 	
     arrowh.addEventListener('mouseleave', function () {
       arrow.style.visibility = 'hidden'
