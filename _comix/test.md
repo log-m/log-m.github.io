@@ -5,4 +5,4 @@ prevpage: http://log-m.github.io/ch1pg1/
 nextpage: http://log-m.github.io/ch1pg2/
 permalink: /ch1pg1/
 ---
-![Welcome pardners](log-m.github.io/_comix/pages/biggun 1 concept.png) 
+![Welcome pardners](http://log-m.github.io/_comix/pages/biggun 1 concept.png) 
