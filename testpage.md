@@ -5,4 +5,4 @@ prevpage: log-m.github.io
 nextpage: log-m.github.io/1-2
 date: 2017-03-26
 ---
-![Welcome pardners](/_pages/biggun 1 concept.png) 
+![Welcome pardners](/_comix/_pages/biggun 1 concept.png) 
