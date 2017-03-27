@@ -1,115 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>BIGGUN Comix</title>
-        <style>
-            body {
-                font-family: Goudy Stout, sans-serif;
-                background: rgb(250, 250, 77);
-            }
-            .navigation {
-                margin: 0;
-                background: beige;
+---
+layout: default
+title: Biggun Blogspace
+---
+	<h1>{{ page.title }}</h1>
+	<h6>For when you just want to look at words instead of pictures</h6>
+	<ul class="posts">
 
-                display: flex;
-
-                flex-flow: row wrap;
-                justify-content:center;
-            }
-            .navigation a{
-                text-decoration: none;
-                display: block;
-                padding: 1.5em;
-                color: black;
-            }
-
-            .navigation a:hover {
-                background-color: darken(beige, 10%);
-            }
-            .ghost{
-                display:flex;
-                flex-direction: row-reverse;
-                justify-content:space-between;
-                margin:auto;
-            }
-            .ghostfriend{
-                
-                
-            }
-			.comic>img{
-				height:60%;
-				width:60%;
-			}
-        </style>
-    </head>
-    <body>
-        <ul class="navigation">
-            <a href="https://www.youtube.com/watch?v=VbHLGUAlB8g&list=FLxVH28nrwoV4LGawK0EWV4g&index=2">Death</a></li>
-            <a href="https://www.youtube.com/watch?v=oz5qG80th4E&list=FLxVH28nrwoV4LGawK0EWV4g&index=3">Sunglasses</a></li>
-            <a href="https://www.youtube.com/watch?v=XEILe174M3s&index=6&list=FLxVH28nrwoV4LGawK0EWV4g">Don't Click</a></li>
-        </ul>
-		
-        <h1>Mystery Webzone</h1>
-
-        <h2>By Logan Morris</h2>
-        
-        <!--<h3>Fuck You</h3>-->
-        <center> 
-		<div class='comic'><img id="container" src="biggun 1 concept.png" style:"height: 1312px; width: 1125px;"></div>
-		<input type='button' value='prev' onclick='ic1.prev("container")' />
-		<input type='button' value='next' onclick='ic1.next("container")' />
-		
-		</center>
-		
-		<div class="ghost"id="arrowh" style ="width:250px; height:250px; background: red;  "/>
-		<img class="ghostfriend"id="arrow" src="future.jpg"style:"height: 250px;width: 350px"/>
-        <A href = "https://www.youtube.com/watch?v=JZ_iJt8Ny1A"><img class="ghostfriend" id="arrow2"src = "future.jpg"  alt = "Tyler the Creator"style=" height:250px; width: 350px"></A>
-        </div>
-
-         <ul>
-		<li>brain drain
-		<li>brain drain
-		<li><strong>brain drain</strong>
-		</ul>
-       
-    </body>
-	<script>
-			
-			var man = window.document.getElementById('arrow');
-			man.style.visibility= 'hidden';
-            man = window.document.getElementById('arrow2');
-            man.style.visibility= 'hidden';
-			var arrowhead = window.document.getElementById('arrowh');
-    arrowh.addEventListener('mouseover', function () {
-      arrow.style.visibility = ''
-       arrow2.style.visibility = ''
-    })
-	function ImageCollection(images) {
-     this.images = images;
-     this.i = 0;
-     this.next = function(imgId) {
-     var img = document.getElementById(imgId);
-     this.i++;
-     if (this.i == images.length){
-         this.i = 0;
-         }
-     img.src = images[this.i];
-     }
-     this.prev = function(imgId) {
-     var img = document.getElementById(imgId);
-     this.i--;
-     if (this.i < 0){
-         this.i = images.length -1;
-         }
-         img.src = images[this.i];
-     }
-	}
-	var ic1 = new ImageCollection(['biggun 1 concept.png', 'biggun 2.png', 'biggun 3.png']);
-	
-    arrowh.addEventListener('mouseleave', function () {
-      arrow.style.visibility = 'hidden'
-       arrow2.style.visibility = 'hidden'
-    })
-	</script>
-</html>
+	  {% for post in site.posts %}
+	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
