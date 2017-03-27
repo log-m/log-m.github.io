@@ -1,8 +1,0 @@
----
-layout: comicbook
-title: Chapter 1, Page 1
-prevpage: log-m.github.io
-nextpage: log-m.github.io/1-2
-date: 2017-03-26
----
-![Welcome pardners](biggun 1 concept.png) 
