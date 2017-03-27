@@ -1,2 +1,3 @@
 name: Biggun Comix
 markdown: kramdown
+include: _comix
