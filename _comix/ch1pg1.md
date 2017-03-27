@@ -1,5 +1,5 @@
 ---
-layout: comix
+layout: comicbook
 title: Chapter 1, Page 1
 prevpage: log-m.github.io
 nextpage: log-m.github.io/1-2
